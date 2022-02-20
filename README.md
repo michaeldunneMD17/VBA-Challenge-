@@ -1,6 +1,6 @@
 VBA Wall Street Challege 
 ------------------------
- Create a script that loops through stock marklet data from three consecutive years: 
+ Create a script that loops through stock market data from three consecutive years: 
  - 2018, 2019 & 2020. 
 
 Table of Contents: 
