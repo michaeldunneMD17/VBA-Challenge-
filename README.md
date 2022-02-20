@@ -1,6 +1,6 @@
 VBA Wall Street Challege 
 ------------------------
-For this assignment we were assigned to create a script that loop through stock marklet data from three consecutive years: 
+For this assignment we were assigned to create a script that loops through stock marklet data from three consecutive years: 
  - 2018, 2019 & 2020. 
 
 Table of Contents: 
