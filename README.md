@@ -1,6 +1,6 @@
 VBA Wall Street Challege 
 ------------------------
-For this assignment we were assigned to create a script that loops through stock marklet data from three consecutive years: 
+ Create a script that loops through stock marklet data from three consecutive years: 
  - 2018, 2019 & 2020. 
 
 Table of Contents: 
@@ -13,11 +13,11 @@ Table of Contents:
 
 Assignment Insutructions: 
 -------------------------
-The Script must loop through all the stocks for each year and incude the following: 
+The script must loop through all the stocks for each year and incude the following: 
 - The Ticker Symbol 
 - Yearly change from opening price at the beginning of as given year, to the closing price of that same year 
 - The percent change % from opening price at the beginning of a given year to the closing price of that year, and  
-- The total stock volume of the stock. 
+- The total stock volume of the stock
 
 Technology Used: 
 -----------------------
@@ -39,8 +39,8 @@ Purpose of the Assignment
 --------------------------
 To determine the: 
   - Yearly change 
-  - Percent change and 
-  -total stock volume between a list of tickers on a given year. 
+  - Percent change, and 
+  - Total stock volume between a list of tickers on a given year. 
 
 And additonally identify which specific ticker, of the roughly 3,000 in all three years experienced: 
   - The Greatest Percentage Increase %, 
