@@ -1,0 +1,57 @@
+Sub stock_analysis():
+   ' Set dimensions
+   Dim total As Double
+   Dim i As Long
+   Dim change As Double
+   Dim j As Integer
+   Dim start As Long
+   Dim rowCount As Long
+   Dim percentChange As Double
+   Dim days As Integer
+   Dim dailyChange As Double
+   Dim averageChange As Double
+   Dim ws As Worksheet
+   
+   '--------------------------------------
+   
+   For Each ws In Worksheets
+       ' Set values for each worksheet
+       j = 0
+       total = 0
+       change = 0
+       start = 2
+       dailyChange = 0
+       ' Set title row
+       ws.Range("I1").Value = "Ticker"
+       ws.Range("J1").Value = "Yearly Change"
+       ws.Range("K1").Value = "Percent Change"
+       ws.Range("L1").Value = "Total Stock Volume"
+       ws.Range("P1").Value = "Ticker"
+       ws.Range("Q1").Value = "Value"
+       ws.Range("O2").Value = "Greatest % Increase"
+       ws.Range("O3").Value = "Greatest % Decrease"
+       ws.Range("O4").Value = "Greatest Total Volume"
+       ' get the row number of the last row with data
+       rowCount = Cells(Rows.Count, "A").End(xlUp).Row
+       
+' -------------------------------------------------------
+          For i = 2 To rowCount
+           ' If ticker changes then print results
+           If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
+               ' Stores results in variables
+               total = total + ws.Cells(i, 7).Value
+               ' Handle zero total volume
+               If total = 0 Then
+                   ' print the results
+                   ws.Range("I" & 2 + j).Value = Cells(i, 1).Value
+                   ws.Range("J" & 2 + j).Value = 0
+                   ws.Range("K" & 2 + j).Value = "%" & 0
+                   ws.Range("L" & 2 + j).Value = 0
+               Else
+                   ' Find First non zero starting value
+                   If ws.Cells(start, 3) = 0 Then
+                       For find_value = start To i
+                           If ws.Cells(find_value, 3).Value <> 0 Then
+                               start = find_value
+                               Exit For
+                           End If
